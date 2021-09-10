@@ -44,11 +44,11 @@
     width: 100px;
     height: 100px;
     background: red;
-    transition: background-color 1s;
+    transition: opacity 1s;
 }
 
 .ex-4-square:hover{
-    background-color: #F5F5F5;
+    opacity: 0;
 }
 
 /* EXERCISE 5 */
@@ -98,10 +98,22 @@
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: filter 1.5s, border-radius 1.5s, transform 1.5s;
 }
+
+.ex-9-img:hover{
+    filter: invert(100%);
+    border-radius: 15px;
+    transform: scale(1.5, 1.5) ;
+}
+
+/* EXERCISE 10 */
+
 .ex-10-icon {
     font-size: 60px;
 }
+
+
 .ex-11-icon {
     font-size: 60px;
 }
