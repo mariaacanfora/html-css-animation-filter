@@ -76,12 +76,22 @@
 
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+    transition: filter 1.5s, border-radius 1.5s;
 }
 
 .ex-6-img:hover{
+    transition: none;
     filter: grayscale()
 }
 
+.ex-7-img:hover{
+    filter: grayscale();
+}
+
+.ex-8-img:hover{    
+    filter: grayscale();
+    border-radius: 15px;
+}
 
 /* EXERCISE 9 */
 
