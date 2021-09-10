@@ -127,7 +127,6 @@
 
 .ex-11-icon {
     font-size: 60px;
-
 }
 
 @keyframes spin-3_4{
@@ -175,4 +174,133 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-12-top-white{    
+    animation: border-top-move 2s linear forwards;
+}
+
+.ex-12-bottom-white{
+    animation: border-bottom-move 2s linear forwards;
+}
+
+.ex-13-top-white{
+    animation: border-top-move-around 2s linear infinite;
+}
+
+.ex-13-bottom-white{
+    animation: border-bottom-move-around 2s linear infinite;
+}
+
+
+
+@keyframes border-top-move{
+    0%{
+        top: -10px;
+        left: -10%;
+    }
+
+    25%{
+        top: -10px;
+        left: 25%
+    }
+
+    50%{
+        top: -10px;
+        left: 50%
+    }
+
+    70%{
+        top: -10px;
+        left: 75%;
+    }
+
+    100%{
+        top: 30px;
+        left: 75%;
+    }
+}
+
+@keyframes border-bottom-move{
+    0%{
+        bottom: -10px;
+        right: 20%;
+    }
+
+    25%{
+        bottom: -10px;
+        right: 25%
+    }
+
+    50%{
+        bottom: -10px;
+        right: 50%
+    }
+
+    70%{
+        bottom: -10px;
+        right: 75%;
+    }
+
+    100%{
+        bottom: 30px;
+        right: 75%;
+    }
+}
+
+@keyframes border-top-move-around{
+    0%{
+        top: -10px;
+        left: -10%;
+    }
+
+    25%{
+        top: -10px;
+        left: 75%;
+    }
+
+    50%{
+        top: 55px;
+        left: 75%;
+    }
+
+    75%{
+        top: 55px;
+        left: -10%;
+    }
+
+    
+    100%{
+        top: -10px;
+        left: -10%;
+    }
+}
+
+
+@keyframes border-bottom-move-around{
+    0%{
+        bottom: -10px;
+        right: -10%;
+    }
+
+    25%{
+        bottom: -10px;
+        right: 75%;
+    }
+
+    50%{
+        bottom: 55px;
+        right: 75%;
+    }
+
+    75%{
+        bottom: 55px;
+        right: -10%;
+    }
+
+    
+    100%{
+        bottom: -10px;
+        right: -10%;
+    }
 }
