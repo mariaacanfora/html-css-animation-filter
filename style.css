@@ -58,17 +58,15 @@
     width: 60px;
     height: 60px;
     background: red;
-    transition: width 1s, height 1s;
+    transition: transform 2s;
 }
 
 .ex-5-square:hover{
-    width: 80px;
-    height: 80px;
+    transform: scale(2);
 }
 
 .ex-5-square:hover:active{
-    width: 40px;
-    height: 40px;
+    transform: scale(.5);
 }
 
 /* EXERCISES 6, 7, 8 */
@@ -130,17 +128,19 @@
 }
 
 @keyframes spin-3_4{
-    from {
+    0% {
         transform:rotate(0deg);
     }
-    to {
+    80% {
         transform:rotate(270deg);
     }
-
+    100% {
+        transform:rotate(0deg);
+    }
 }
 
 .ex-11-icon:hover{
-    animation: spin-3_4 1s alternate infinite;
+    animation: spin-3_4 1.5s;
 }
 
 
@@ -170,98 +170,67 @@
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
-    right: 20%;
+    right: 10%;
     background: #f5f5f5;
     width: 60px;
     height: 20px;
 }
 
-.ex-12-top-white{    
-    animation: border-top-move 2s linear forwards;
+.ex-12-button:hover .ex-12-top-white{    
+    animation: border-top-move 1s linear alternate 2;
 }
 
-.ex-12-bottom-white{
-    animation: border-bottom-move 2s linear forwards;
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: border-bottom-move 1s linear alternate 2;
 }
 
-.ex-13-top-white{
-    animation: border-top-move-around 2s linear infinite;
+.ex-13-button:hover .ex-13-top-white{
+    animation: border-top-move-around 4s linear 2;
 }
 
-.ex-13-bottom-white{
-    animation: border-bottom-move-around 2s linear infinite;
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: border-bottom-move-around 4s linear 2;
 }
 
 
 
 @keyframes border-top-move{
-    0%{
+    from{
         top: -10px;
-        left: -10%;
+        left: 10%;
     }
-
-    25%{
+    to{
         top: -10px;
-        left: 25%
-    }
-
-    50%{
-        top: -10px;
-        left: 50%
-    }
-
-    70%{
-        top: -10px;
-        left: 75%;
-    }
-
-    100%{
-        top: 30px;
-        left: 75%;
+        left: 60%;
     }
 }
 
 @keyframes border-bottom-move{
-    0%{
+    from{
         bottom: -10px;
         right: 20%;
     }
 
-    25%{
+    to{
         bottom: -10px;
-        right: 25%
-    }
-
-    50%{
-        bottom: -10px;
-        right: 50%
-    }
-
-    70%{
-        bottom: -10px;
-        right: 75%;
-    }
-
-    100%{
-        bottom: 30px;
-        right: 75%;
+        right: 60%;
     }
 }
 
 @keyframes border-top-move-around{
     0%{
         top: -10px;
-        left: -10%;
+        left: 10%;
     }
 
     25%{
         top: -10px;
-        left: 75%;
+        left: 80%;
     }
 
     50%{
         top: 55px;
-        left: 75%;
+        left: 80%;
     }
 
     75%{
@@ -280,17 +249,17 @@
 @keyframes border-bottom-move-around{
     0%{
         bottom: -10px;
-        right: -10%;
+        right: 10%;
     }
 
     25%{
         bottom: -10px;
-        right: 75%;
+        right: 80%;
     }
 
     50%{
         bottom: 55px;
-        right: 75%;
+        right: 80%;
     }
 
     75%{
@@ -301,6 +270,6 @@
     
     100%{
         bottom: -10px;
-        right: -10%;
+        right: 10%;
     }
 }
