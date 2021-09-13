@@ -208,7 +208,7 @@
 @keyframes border-bottom-move{
     from{
         bottom: -10px;
-        right: 20%;
+        right: 10%;
     }
 
     to{
@@ -270,6 +270,6 @@
     
     100%{
         bottom: -10px;
-        right: 10%;
+        right: -10%;
     }
 }
